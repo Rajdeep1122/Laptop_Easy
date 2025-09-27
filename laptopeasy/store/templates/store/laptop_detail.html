@@ -1,0 +1,21 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ laptop.image.url }}" class="img-fluid rounded" alt="{{ laptop.name }}">
+    </div>
+    <div class="col-md-6">
+        <h1>{{ laptop.name }}</h1>
+        <h3 class="text-primary">₹{{ laptop.price }}</h3>
+        <hr>
+        <h4>Description & Specs</h4>
+        <p>{{ laptop.description|linebreaks }}</p>
+        <hr>
+        <h4>Seller Information</h4>
+        <p><strong>Name:</strong> {{ laptop.seller_name }}</p>
+        <p><strong>Contact:</strong> To prevent spam, click the button to open your email client.</p>
+        <a href="mailto:{{ laptop.seller_email }}?subject=Inquiry about your {{ laptop.name }} on LaptopEasy" class="btn btn-success btn-lg">Contact Seller via Email</a>
+    </div>
+</div>
+{% endblock %}

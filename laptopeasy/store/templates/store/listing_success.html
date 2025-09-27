@@ -1,0 +1,10 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<div class="text-center py-5">
+    <h1 class="display-4">✅ Success!</h1>
+    <p class="lead">Your laptop listing has been submitted successfully.</p>
+    <p>It will be visible on the site once an administrator has approved it. Thank you!</p>
+    <a href="{% url 'laptop_list' %}" class="btn btn-primary mt-3">Back to Home</a>
+</div>
+{% endblock %}
